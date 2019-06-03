@@ -23,6 +23,8 @@ def create_session():
         'Referer': 'http://www.zhihu.com/'
     }
     r = session.post('http://www.zhihu.com/login/email', data=login_data, headers=header)
+    r.encoding = 'utf-8'
+    print(r.text)
     if r.json()['r'] == 1:
         print ('Login Failed, reason is:'),
         for m in r.json()['data']:
