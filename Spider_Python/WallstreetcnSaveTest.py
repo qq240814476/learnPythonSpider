@@ -93,6 +93,7 @@ def ContentSave(item):
     # district的筛选
     categorySet = item[2]
     category_num = categorySet.split(",")
+    print(item[0])
     category_name = map(num2name, category_num)
     districtset = set(category_name)&{u"中国", u"美国", u"欧元区", u"日本", u"英国", u"澳洲", u"加拿大", u"瑞士", u"其他地区"}
     district = ",".join(districtset)
@@ -156,9 +157,9 @@ if __name__ == '__main__':
         data = {
             "page":page
         }
-        content = Spider(url, data).decode(encoding='utf-8')
-        print(content)
-        items = re.findall(r'"code":.*?,"message":".*?","data":.*?', content) # 正则匹配
+        content = Spider(url, data)
+        items = re.findall(r'b"code":.*?,"message":".*?","data":{.*?}', content) # 正则匹配
+        print(items)
         if len(items) == 0:
             print("The End Page:", page)
             data = urllib.parse.urlencode(data) # 编码工作，由dict转为string
