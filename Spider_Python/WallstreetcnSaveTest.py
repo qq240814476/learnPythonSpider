@@ -45,7 +45,7 @@ class MongoDBIO:
     # 连接数据库，db和posts为数据库和集合的游标
     def Connection(self):
         # connection = pymongo.Connection() # 连接本地数据库
-        connection = pymongo.collection.Connection(host=self.host, port=self.port)
+        connection = pymongo.MongoClient(host=self.host, port=self.port)
         # db = connection.datas
         db = connection[self.database]
         if self.name or self.password:
