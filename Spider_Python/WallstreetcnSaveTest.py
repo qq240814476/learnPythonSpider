@@ -160,7 +160,7 @@ if __name__ == '__main__':
         }
         content = Spider(url, data)
         print(content)
-        items = re.findall(r'"type":"(.*?)","codeType".*?"contentHtml":"(.*?)""data".*?', content) # 正则匹配
+        items = re.compile(r'"data":*$', content) # 正则匹配
         if len(items) == 0:
             print("The End Page:", page)
             data = urllib.parse.urlencode(data) # 编码工作，由dict转为string
