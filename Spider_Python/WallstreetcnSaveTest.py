@@ -158,9 +158,9 @@ if __name__ == '__main__':
         data = {
             "page":page
         }
-        content = Spider(url, data)
+        content = Spider(url, data).decode(encoding='utf-8')
         print(content)
-        items = re.compile(r'"data":*$', content) # 正则匹配
+        items = re.findall(r'"code":.*?,"message":".*?","data":.*?', content) # 正则匹配
         if len(items) == 0:
             print("The End Page:", page)
             data = urllib.parse.urlencode(data) # 编码工作，由dict转为string
