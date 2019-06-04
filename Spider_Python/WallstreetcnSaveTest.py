@@ -3,7 +3,7 @@
 
 import sys
 import re
-import urllib,urllib.request
+import urllib.parse,urllib.request
 import requests
 import pymongo
 import datetime
@@ -123,7 +123,7 @@ def func(page):
     items = re.findall(r'"type":"(.*?)","codeType".*?"contentHtml":"(.*?)","data".*?"categorySet":"(.*?)","hasMore"', content) # 正则匹配
     if len(items) == 0:
         print("The End Page:"), page
-        data = urllib.urlencode(data) # 编码工作，由dict转为string
+        data = urllib.parse.urlencode(data) # 编码工作，由dict转为string
         full_url = url+'?'+data
         print(full_url)
         sys.exit(0) # 无错误退出
@@ -159,10 +159,11 @@ if __name__ == '__main__':
             "page":page
         }
         content = Spider(url, data)
+        print(content)
         items = re.findall(r'"type":"(.*?)","codeType".*?"contentHtml":"(.*?)","data".*?"categorySet":"(.*?)","hasMore"', content) # 正则匹配
         if len(items) == 0:
             print("The End Page:", page)
-            data = urllib.urlencode(data) # 编码工作，由dict转为string
+            data = urllib.parse.urlencode(data) # 编码工作，由dict转为string
             full_url = url+'?'+data
             print(full_url)
             break
