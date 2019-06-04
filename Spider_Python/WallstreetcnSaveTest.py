@@ -89,8 +89,6 @@ def ContentSave(item):
     source = "wallstreetcn"
     createdtime = datetime.datetime.now()
     type = item[0]
-    content = item[1].decode("unicode_escape") # json格式数据中，需从'\\uxxxx'形式的unicode_escape编码转换成u'\uxxxx'的unicode编码
-    content = content.encode("utf-8")
     # print content
     # district的筛选
     categorySet = item[2]
