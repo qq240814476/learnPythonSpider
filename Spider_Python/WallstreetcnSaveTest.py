@@ -23,7 +23,7 @@ Category_Map = {
     "13":u"英国",
     "14":u"澳洲",
     "15":u"加拿大",
-    "16":u"瑞士",bbb
+    "16":u"瑞士",
     "17":u"其他地区"
 }
 def num2name(category_num):
