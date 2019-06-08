@@ -79,8 +79,30 @@ def fib(max):
 def fib(max):
     n, a, b = 0, 0, 1
     while n < max:
-        yield b  # 正好复习一下js的迭代器，每次yield停止，next()再继续走下去
+        yield b  # 正好复习一下js的Generator，function* 每次yield停止，next()再继续走下去
         a, b = b, a + b
         n = n + 1
     return 'done'
+```
+
+```javascript
+function* helloWorldGenerator() {
+  yield 'hello';
+  yield 'world';
+  return 'ending';
+}
+
+var hw = helloWorldGenerator();
+
+hw.next()
+// { value: 'hello', done: false }
+
+hw.next()
+// { value: 'world', done: false }
+
+hw.next()
+// { value: 'ending', done: true }
+
+hw.next()
+// { value: undefined, done: true }
 ```
