@@ -106,3 +106,8 @@ hw.next()
 hw.next()
 // { value: undefined, done: true }
 ```
+js yield <br/>
+1. 遇到yield表达式，就暂停执行后面的操作，并将紧跟在yield后面的那个表达式的值，作为返回的对象的value属性值。
+2. 下一次调用next方法时，再继续往下执行，直到遇到下一个yield表达式。
+3. 如果没有再遇到新的yield表达式，就一直运行到函数结束，直到return语句为止，并将return语句后面的表达式的值，作为返回的对象的value属性值。
+4. 如果该函数没有return语句，则返回的对象的value属性值为undefined。
