@@ -125,7 +125,7 @@ for x in [1, 2, 3, 4, 5]:
 
 # 首先获得Iterator对象:
 it = iter([1, 2, 3, 4, 5])
-# 循环:
+# 循环:啊
 while True:
     try:
         # 获得下一个值:
