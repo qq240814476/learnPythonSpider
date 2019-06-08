@@ -52,7 +52,7 @@ isinstance(y, str)
 # False
 ```
 
-### 生成器
+### 生成器    需要细细研究下
 generator
 ```python
 
@@ -65,3 +65,22 @@ g
 <generator object <genexpr> at 0x1022ef630>
 ```
 如果要一个一个打印出来，可以通过next()函数获得generator的下一个返回值, 也可以用for循环
+
+```python
+# 斐波那锲
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        print(b)
+        a, b = b, a + b # 还可以这么写啊   a, b = b, a + b
+        n = n + 1
+    return 'done'
+
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b  # 正好复习一下js的迭代器，每次yield停止，next()再继续走下去
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+```
