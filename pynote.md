@@ -14,4 +14,10 @@ l[::5]
 # 甚至什么都不写，只写[:]就可以原样复制一个list
 l[:]
 [0, 1, 2, 3, ..., 99]
+# tuple切片返回tuple
+(0, 1, 2, 3, 4, 5)[:3]
+(0, 1, 2)
 ```
+
+### 迭代
+默认情况下，dict迭代的是key。如果要迭代value，可以用for value in d.values()，如果要同时迭代key和value，可以用for k, v in d.items()
