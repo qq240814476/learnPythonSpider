@@ -113,3 +113,4 @@ js yield <br/>
 4. 如果该函数没有return语句，则返回的对象的value属性值为undefined。
 
 ### 迭代器
+Iterator甚至可以表示一个无限大的数据流，例如全体自然数。而使用list是永远不可能存储全体自然数的。
