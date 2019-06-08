@@ -53,4 +53,15 @@ isinstance(y, str)
 ```
 
 ### 生成器
+generator
+```python
 
+L = [x * x for x in range(10)]
+L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+g = (x * x for x in range(10))
+g
+<generator object <genexpr> at 0x1022ef630>
+```
+如果要一个一个打印出来，可以通过next()函数获得generator的下一个返回值, 也可以用for循环
