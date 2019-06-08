@@ -51,3 +51,6 @@ y = 123
 isinstance(y, str)
 # False
 ```
+
+### 生成器
+
