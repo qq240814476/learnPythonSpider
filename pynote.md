@@ -122,7 +122,7 @@ Python的for循环本质上就是通过不断调用next()函数实现的，例�
 for x in [1, 2, 3, 4, 5]:
     pass
 # 等价于
-
+a 
 # 首先获得Iterator对象:
 it = iter([1, 2, 3, 4, 5])
 # 循环:
