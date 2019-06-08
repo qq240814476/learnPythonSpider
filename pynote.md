@@ -113,4 +113,8 @@ js yield <br/>
 4. 如果该函数没有return语句，则返回的对象的value属性值为undefined。
 
 ### 迭代器
-Iterator甚至可以表示一个无限大的数据流，例如全体自然数。而使用list是永远不可能存储全体自然数的。
+Iterator甚至可以表示一个无限大的数据流，例如全体自然数。而使用list是永远不可能存储全体自然数的。<br/>
+凡是可作用于for循环的对象都是Iterable类型；<br/>
+凡是可作用于next()函数的对象都是Iterator类型，它们表示一个惰性计算的序列；<br/>
+集合数据类型如list、dict、str等是Iterable但不是Iterator，不过可以通过iter()函数获得一个Iterator对象。<br/>
+Python的for循环本质上就是通过不断调用next()函数实现的，例如：<br/>
