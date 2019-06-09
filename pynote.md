@@ -269,4 +269,27 @@ type((x for x in range(10)))==types.GeneratorType
 
 type(abs)==types.BuiltinFunctionType
 # True
+
+# 对于class的继承关系来说，使用type()就很不方便。我们要判断class的类型，可以使用isinstance()函数。
+a = Animal()
+d = Dog()
+h = Husky()
+isinstance(h, Husky)
+# True
+
+# 并且还可以判断一个变量是否是某些类型中的一种，比如下面的代码就可以判断是否是list或者tuple
+isinstance([1, 2, 3], (list, tuple))
+# True
+
+# 我们自己写的类，如果也想用len(myObj)的话，就自己写一个__len__()方法
+class MyDog(object):
+    def __len__(self):
+        return 100
+dog = MyDog()
+len(dog)
+# 100
+
+getattr(obj, 'y')
+setattr(obj, 'y', 19
+hasattr(obj, 'x')
 ```
