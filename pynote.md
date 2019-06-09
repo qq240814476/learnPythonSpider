@@ -241,6 +241,8 @@ class Student(object):
 
 ## 面向对象编程
 ### 继承和多态
+python 是动态语言，“叫的像鸭子走路像鸭子那么就是个鸭子”
+
 ```python
 class Animal(object):
     def run(self):
