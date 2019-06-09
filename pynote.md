@@ -211,3 +211,14 @@ write()
 
 ### 偏函数
 偏函数就是在原有的函数上面加参数，构造成新的函数   <code>functools.partial</code>
+```python
+int2 = functools.partial(int, base=2)
+# 等价于
+kw = { 'base': 2 }
+int('10010', **kw)
+```
+
+## 作用域
+类似<code>__xxx__</code>这样的变量是特殊变量，可以被直接引用，但是有特殊用途，比如上面的<code>__author__</code>，<code>__name__</code>就是特殊变量，hello模块定义的文档注释也可以用特殊变量<code>__doc__</code>访问，我们自己的变量一般不要用这种变量名；<br/>
+类似<code>_xxx</code>和<code>__xxx</code>这样的函数或变量就是非公开的（private），不应该被直接引用，比如<code>_abc</code>，<code>__abc</code>等；<br/>
+之所以我们说，<code>private</code>函数和变量“不应该”被直接引用，而不是“不能”被直接引用，是因为Python并没有一种方法可以完全限制访问private函数或变量，但是，从编程习惯上不应该引用<code>private</code>函数或变量。<br/>
