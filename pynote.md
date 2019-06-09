@@ -316,3 +316,60 @@ del s.name # 如果删除实例的name属性
 print(s.name) # 再次调用s.name，由于实例的name属性没有找到，类的name属性就显示出来了
 # Student
 ```
+
+## 面向对象高级编程
+### 使用@property
+```python
+class Student(object):
+
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score must be an integer!')
+        if value < 0 or value > 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value
+
+s = Student()
+s.score = 60 # OK，实际转化为s.set_score(60)
+s.score # OK，实际转化为s.get_score()
+60
+s.score = 9999
+Traceback (most recent call last):
+ValueError: score must between 0 ~ 100!
+
+# 请利用@property给一个Screen对象加上width和height属性，以及一个只读属性resolution
+class Screen(object):
+  __init__(self, width = 0, height = 0):
+    width(self, width)
+    height(self, height)
+  @property
+  def width(self):
+    return self._width
+  @width.setter
+  def width(self, value):
+    if not instance(value, int):
+      raise ValueError('width must be int')
+    self._width = value
+  
+  @property
+  def height(self):
+    return self._height
+  @height.setter
+  def height(self, value):
+    if not instance(value, int):
+      raise ValueError('height must be int')
+    self._height = value
+  
+  def resolution(self):
+    return self._width * self._height
+
+# test:
+s = Screen(1024, 768)
+print(s.resolution)
+assert s.resolution == 786432, '1024 * 768 = %d ?' % s.resolution
+```
