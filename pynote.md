@@ -254,3 +254,19 @@ class Dog(Animal):
 class Cat(Animal):
     pass
 ```
+
+### 获取对象信息
+
+```python
+type(123)
+# <class 'int'>
+
+type(Lambda x: x)==types.LambdaType
+# True
+
+type((x for x in range(10)))==types.GeneratorType
+# True
+
+type(abs)==types.BuiltinFunctionType
+# True
+```
