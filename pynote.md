@@ -134,7 +134,7 @@ while True:
         # 遇到StopIteration就退出循环
         break
 ```
-
+## 函数式编程
 ### 匿名函数
 关键字<code>lambda</code>表示匿名函数，冒号前面的x表示函数参数。<br/>
 匿名函数有个限制，就是只能有一个表达式，不用写return，返回值就是该表达式的结果。
@@ -208,3 +208,6 @@ now()
 writeaaa()
 write()
 ```
+
+### 偏函数
+偏函数就是在原有的函数上面加参数，构造成新的函数   <code>functools.partial</code>
