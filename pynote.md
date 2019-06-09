@@ -134,3 +134,31 @@ while True:
         # 遇到StopIteration就退出循环
         break
 ```
+
+### 匿名函数
+关键字<code>lambda</code>表示匿名函数，冒号前面的x表示函数参数。<br/>
+匿名函数有个限制，就是只能有一个表达式，不用写return，返回值就是该表达式的结果。
+```python
+list(map(Lambda x: x * x, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
+
+### 装饰器
+我们要借助Python的@语法，把decorator置于函数的定义处<br/>
+把@log放到now()函数的定义处，相当于执行了语句:
+
+```python
+now = log(now)
+# 因为返回的那个wrapper()函数名字就是'wrapper'，所以，需要把原始函数的__name__等属性复制到wrapper()函数中，否则，有些依赖函数签名的代码执行就会出错。
+# 不需要编写wrapper.__name__ = func.__name__这样的代码，Python内置的functools.wraps就是干这个事的，所以，一个完整的decorator的写法如下
+import functools
+
+def log(text):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kw)
+        return wrapper
+    return decorator
+```
