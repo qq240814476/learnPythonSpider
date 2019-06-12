@@ -400,3 +400,38 @@ assert s.resolution == 786432, '1024 * 768 = %d ?' % s.resolution
 这么多还是看文档吧，[传送门](http://www.dba.cn/book/python3/MianXiangDuiXiangGaoJiBianCheng/DingZhiLei.html)
 
 ### 使用枚举类Enum
+简易写法：
+
+```python
+from enum import Enum
+
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+```
+
+制成枚举类：
+
+```python
+from enum import Enum, unique
+
+@unique
+class Weekday(Enum):
+    Sun = 0 # Sun的value被设定为0
+    Mon = 1
+    Tue = 2
+    Wed = 3
+    Thu = 4
+    Fri = 5
+    Sat = 6
+
+day1 = Weekday.Mon
+print(day1)
+# Weekday.Mon
+print(Weekday.Tue)
+# Weekday.Tue
+print(Weekday['Tue'])
+# Weekday.Tue
+print(Weekday.Tue.value)
+# 2
+```
+
+### 
