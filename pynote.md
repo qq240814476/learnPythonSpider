@@ -398,3 +398,5 @@ assert s.resolution == 786432, '1024 * 768 = %d ?' % s.resolution
 
 ### __str__(),__iter__(),__getitem__(),__getattr__(),__call__()
 这么多还是看文档吧，[传送门](http://www.dba.cn/book/python3/MianXiangDuiXiangGaoJiBianCheng/DingZhiLei.html)
+
+### 使用枚举类Enum
