@@ -434,4 +434,4 @@ print(Weekday.Tue.value)
 # 2
 ```
 
-### 
+### 使用元类
