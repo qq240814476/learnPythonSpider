@@ -22,7 +22,7 @@ data = json.loads(html)
 # print(cities)
 
 smallIdCities = jsonpath.jsonpath(data,'$..allCitySearchLabels..[?(@.id<600)].name')
-print(smallIdCities)
+print(smallIdCities)a 
 
 '''
 ```json
