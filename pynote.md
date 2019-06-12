@@ -434,4 +434,5 @@ print(Weekday.Tue.value)
 # 2
 ```
 
-### 使用元类
+### 使用元类 Metaclass
+<strong>元类在实体类的时候起到了至关重要的作用  ORM框架提供</strong>
