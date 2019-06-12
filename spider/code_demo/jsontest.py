@@ -16,10 +16,13 @@ html = response.text
 # print(html)
 # 把响应数据转换成python数据类型
 data = json.loads(html)
-print(data)
+# print(data)
 # 使用 jsonpath 提取数据
-cities = jsonpath.jsonpath(data,'$..allCitySearchLabels..[?(@.isSelected==False)].name')
-print(cities)
+# cities = jsonpath.jsonpath(data,'$..allCitySearchLabels..[?(@.isSelected==False)].name')
+# print(cities)
+
+smallIdCities = jsonpath.jsonpath(data,'$..allCitySearchLabels..[?(@.id<600)].name')
+print(smallIdCities)
 
 '''
 ```json
