@@ -14,7 +14,7 @@ cookie = response.cookies
 
 # print('response: %s \nhtml:%s'%(response, html))
 
-print('response: %s \nhtml:%s'%(response, content))
+print('content: %s'%(content))
 
 # print('response: %s \nhtml:%s'%(response, staus))
 
