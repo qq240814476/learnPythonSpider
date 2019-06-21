@@ -4,6 +4,6 @@ url = 'http://www.baidu.com'
 
 response = requests.get(url)
 
-html = response.text
+html = response.texta
 
 print('response: %s \nhtml:%s'%(response, html))
