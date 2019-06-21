@@ -10,6 +10,6 @@ staus = response.status_code
 requestHead = response.request.headers
 request = response.request
 headers = response.headers
-html = response.cookies
+cookie = response.cookies
 
 print('response: %s \nhtml:%s'%(response, html))
