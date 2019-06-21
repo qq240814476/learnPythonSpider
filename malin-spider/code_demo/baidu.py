@@ -5,5 +5,11 @@ url = 'http://www.baidu.com'
 response = requests.get(url)
 
 html = response.text
+content = response.content
+staus = response.status_code
+html = response.request.headers
+html = response.request
+html = response.headers
+html = response.cookies
 
 print('response: %s \nhtml:%s'%(response, html))
