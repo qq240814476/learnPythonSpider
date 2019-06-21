@@ -23,6 +23,6 @@ cookie = response.cookies
 # print('request: %s'%request)
 
 # respones header
-print('headers: %s'%headers)
+# print('headers: %s'%headers)
 
-# print('response: %s \nhtml:%s'%(response, cookie))
+print('cookie: %s'%cookie)
