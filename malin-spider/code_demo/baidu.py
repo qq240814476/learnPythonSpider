@@ -25,4 +25,4 @@ cookie = response.cookies
 # respones header
 # print('headers: %s'%headers)
 
-print('cookie: %s'%cookie)
+# print('cookie: %s'%cookie)
