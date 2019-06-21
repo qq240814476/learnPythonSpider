@@ -18,9 +18,9 @@ cookie = response.cookies
 
 # print('staus: %s'%staus)
 
-# print('response: %s \nhtml:%s'%(response, requestHead))
+# print('requestHead: %s'%requestHead)
 
-# print('response: %s \nhtml:%s'%(response, request))
+# print('request: %s'%request)
 
 # print('response: %s \nhtml:%s'%(response, headers))
 
