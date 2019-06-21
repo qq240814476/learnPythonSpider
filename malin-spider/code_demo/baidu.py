@@ -9,7 +9,7 @@ content = response.content
 staus = response.status_code
 requestHead = response.request.headers
 request = response.request
-html = response.headers
+headers = response.headers
 html = response.cookies
 
 print('response: %s \nhtml:%s'%(response, html))
