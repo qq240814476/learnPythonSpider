@@ -8,7 +8,7 @@ html = response.text
 content = response.content
 staus = response.status_code
 requestHead = response.request.headers
-html = response.request
+request = response.request
 html = response.headers
 html = response.cookies
 
