@@ -34,7 +34,7 @@ def num2name(category_num):
 
 class MongoDBIO:
     # 申明相关的属性
-    def __init__(self, host, port, name, password, database, collection):a
+    def __init__(self, host, port, name, password, database, collection):
         self.host = host
         self.port = port
         self.name = name
